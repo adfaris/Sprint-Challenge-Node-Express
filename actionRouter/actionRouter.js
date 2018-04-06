@@ -30,7 +30,6 @@ router.get('/:id', (req, res)=> {
 
 router.post('/', (req, res)=>{
     const action = req.body;
-    // console.log(action);
     db
     .insert(action)
     .then(response=>{
@@ -55,7 +54,7 @@ router.delete('/:id', (req, res)=>{
 })
 
 router.put('/:id', (req,res)=>{
-    const {id } = req.params;
+    const { id } = req.params;
     const action = req.body;
     db
     .update(id,action)
